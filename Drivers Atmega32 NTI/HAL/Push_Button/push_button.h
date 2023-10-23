@@ -24,8 +24,8 @@ typedef struct ST_BUTTON_Config_t{
 }ST_BUTTON_Config_t;
 
 
-EN_BUTTON_STATUS_t ECUAL_PUSH_BUTTON_Init(EN_portName_t buttonPort, EN_pinNumber_t buttonPin);
-EN_BUTTON_STATUS_t ECUAL_PUSH_BUTTON_Read(EN_portName_t buttonPort, EN_pinNumber_t buttonPin , u8_t* pinValue );
+EN_BUTTON_STATUS_t HAL_PUSH_BUTTON_Init(EN_portName_t buttonPort, EN_pinNumber_t buttonPin);
+EN_BUTTON_STATUS_t HAL_PUSH_BUTTON_Read(EN_portName_t buttonPort, EN_pinNumber_t buttonPin , u8_t* pinValue );
 
 
 #endif /* PUSH_BUTTON_H_ */

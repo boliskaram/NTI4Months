@@ -10,6 +10,7 @@
 #define SEVEN_SEGMENT_H_
 
 #include "../../MCAL/DIO/dio.h"
+#include "../../LIB/std_types.h"
 
 typedef enum EN_7Seg_Number_t{
 	ZERO = 0,
@@ -32,8 +33,9 @@ typedef enum EN_7Seg_Com_t{
 	COM4
 }EN_7Seg_Com_t;
 
-void HAL_Seven_Segment_Init(EN_7Seg_Com_t Com);
-void HAL_Seven_Segment_Write(u8_t Number);
+void HAL_Seven_Segment_Init();
+void HAL_Seven_Segment_Write(u8_t Number,EN_7Seg_Com_t Com);
+void HAL_Seven_Segment_Clear(EN_7Seg_Com_t Com);
 
 
 

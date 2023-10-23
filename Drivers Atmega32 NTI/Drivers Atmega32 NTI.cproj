@@ -131,6 +131,75 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="App\Calculator\calculator.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Calculator\calculator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Display_Num_Binary_On_LEDs_and_Decimal_On_7SEG\display_num_binary_on_LEDs_and_decimal_on_7SEG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Display_Num_Binary_On_LEDs_and_Decimal_On_7SEG\display_num_binary_on_LEDs_and_decimal_on_7SEG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Sinusoidal_Animation_Of_Character_On_LCD\sinusoidal_animation_of_character_on_LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Sinusoidal_Animation_Of_Character_On_LCD\sinusoidal_animation_of_character_on_LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Toggle_LED_Count_LCD_Using_EXTI\toggle_led_count_on_lcd_using_exti.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Toggle_LED_Count_LCD_Using_EXTI\toggle_led_count_on_lcd_using_exti.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Traffic_Lights_LEDs\traffic_lights_LEDs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Traffic_Lights_LEDs\traffic_lights_LEDs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Turn_On_LED_Using_Button\turn_on_LED_using_button.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Turn_On_LED_Using_Button\turn_on_LED_using_button.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Two_7SEG_Counting_0TO99_Two_7SEG_Counting_99TO0\two_7SEG_counting_0to99_two_7SEG_counting_99to0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Two_7SEG_Counting_0TO99_Two_7SEG_Counting_99TO0\two_7SEG_counting_0to99_two_7SEG_counting_99to0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Write_Name_On_LCD_Using_Button\write_name_on_LCD_using_button.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\Write_Name_On_LCD_Using_Button\write_name_on_LCD_using_button.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\keypad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\keypad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\keypad_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\led.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\Push_Button\push_button.c">
       <SubType>compile</SubType>
     </Compile>
@@ -164,8 +233,43 @@
     <Compile Include="MCAL\DIO\dio_private.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\EXTI\exti.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXTI\exti.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXTI\exti_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EXTI\exti_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\global_interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\global_interrupt_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\global_interrupt_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Global_INT\global_interrupt.c">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\Display_Num_Binary_On_LEDs_and_Decimal_On_7SEG" />
+    <Folder Include="App\Calculator" />
+    <Folder Include="App\Toggle_LED_Count_LCD_Using_EXTI" />
+    <Folder Include="App\Write_Name_On_LCD_Using_Button" />
+    <Folder Include="App\Turn_On_LED_Using_Button" />
+    <Folder Include="App\Traffic_Lights_LEDs" />
+    <Folder Include="App\Two_7SEG_Counting_0TO99_Two_7SEG_Counting_99TO0" />
+    <Folder Include="App\Sinusoidal_Animation_Of_Character_On_LCD" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\LED" />
+    <Folder Include="HAL\KeyPad" />
     <Folder Include="HAL\Push_Button" />
     <Folder Include="HAL\Seven_Segment" />
     <Folder Include="MCAL" />
@@ -173,7 +277,8 @@
     <Folder Include="App" />
     <Folder Include="LIB" />
     <Folder Include="MCAL\DIO" />
-    <Folder Include="Service" />
+    <Folder Include="MCAL\EXTI" />
+    <Folder Include="MCAL\Global_INT" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

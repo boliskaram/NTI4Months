@@ -8,7 +8,7 @@
 #include "push_button.h"
 
 
-EN_BUTTON_STATUS_t ECUAL_PUSH_BUTTON_Init(EN_portName_t buttonPort, EN_pinNumber_t buttonPin){
+EN_BUTTON_STATUS_t HAL_PUSH_BUTTON_Init(EN_portName_t buttonPort, EN_pinNumber_t buttonPin){
 
 	EN_BUTTON_STATUS_t buttonStatus = BUTTON_OK;
 	EN_DIO_STATUS_t DIO_Error = DIO_OK ;
@@ -31,7 +31,7 @@ EN_BUTTON_STATUS_t ECUAL_PUSH_BUTTON_Init(EN_portName_t buttonPort, EN_pinNumber
 	return buttonStatus;
 }
 
-EN_BUTTON_STATUS_t ECUAL_PUSH_BUTTON_Read(EN_portName_t buttonPort, EN_pinNumber_t buttonPin , u8_t* pinValue ){
+EN_BUTTON_STATUS_t HAL_PUSH_BUTTON_Read(EN_portName_t buttonPort, EN_pinNumber_t buttonPin , u8_t* pinValue ){
 	
 	EN_BUTTON_STATUS_t buttonStatus = BUTTON_OK;
 	EN_DIO_STATUS_t DIO_Error = DIO_OK ;

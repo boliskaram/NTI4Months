@@ -8,6 +8,10 @@
 
 #ifndef STD_TYPES_H_
 #define STD_TYPES_H_
+#define F_CPU 16000000ul
+#include <util/delay.h>
+
+#define NULL	((void*)0)
 
 typedef unsigned char		u8_t;
 typedef signed char			s8_t;

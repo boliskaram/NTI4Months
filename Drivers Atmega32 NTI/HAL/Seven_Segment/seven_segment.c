@@ -7,60 +7,117 @@
 
 #include "seven_segment.h"
 
-void HAL_Seven_Segment_Init(EN_7Seg_Com_t Com){
+void HAL_Seven_Segment_Init(){
 	
-		MCAL_DIO_Init_Pin(PORT_B,PIN5,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_B,PIN6,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_A,PIN2,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_A,PIN3,OUTPUT);
-		switch (Com)
-		{
+	MCAL_DIO_Init_Pin(PORT_B,PIN5,OUTPUT);
+	MCAL_DIO_Init_Pin(PORT_B,PIN6,OUTPUT);
+	MCAL_DIO_Init_Pin(PORT_A,PIN2,OUTPUT);
+	MCAL_DIO_Init_Pin(PORT_A,PIN3,OUTPUT);
+	
+	MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
+	MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
+	MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
+	MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
+		
+	MCAL_DIO_Init_Pin(PORT_B,PIN0,OUTPUT);
+	MCAL_DIO_Init_Pin(PORT_B,PIN1,OUTPUT);
+	MCAL_DIO_Init_Pin(PORT_B,PIN2,OUTPUT);
+	MCAL_DIO_Init_Pin(PORT_B,PIN4,OUTPUT);
+}
+
+
+
+void HAL_Seven_Segment_Write(u8_t Number,EN_7Seg_Com_t Com){
+	switch (Com)
+	{
 		case ALL_COM:
-			
 			MCAL_DIO_Write_Pin(PORT_B,PIN5,LOW);
 			MCAL_DIO_Write_Pin(PORT_B,PIN6,LOW);
 			MCAL_DIO_Write_Pin(PORT_A,PIN2,LOW);
 			MCAL_DIO_Write_Pin(PORT_A,PIN3,LOW);
-			
 			break;
+			
 		case COM3:
 			MCAL_DIO_Write_Pin(PORT_B,PIN5,LOW);
 			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
 			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
 			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
 			break;
+			
 		case COM4:
 			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
 			MCAL_DIO_Write_Pin(PORT_B,PIN6,LOW);
 			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
 			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
 			break;
+			
 		case COM2:
 			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
 			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
 			MCAL_DIO_Write_Pin(PORT_A,PIN2,LOW);
 			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
 			break;
+			
 		case COM1:
 			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
 			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
 			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
 			MCAL_DIO_Write_Pin(PORT_A,PIN3,LOW);
 			break;
+			
 		default:
 			break;
-		}
-		MCAL_DIO_Init_Pin(PORT_B,PIN5,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_B,PIN6,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_A,PIN2,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_A,PIN3,OUTPUT);
-		
-		MCAL_DIO_Init_Pin(PORT_B,PIN0,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_B,PIN1,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_B,PIN2,OUTPUT);
-		MCAL_DIO_Init_Pin(PORT_B,PIN4,OUTPUT);
+	}
+	MCAL_DIO_Write_Pin(PORT_B,PIN0,READ_BIT(Number,PIN0));
+	MCAL_DIO_Write_Pin(PORT_B,PIN1,READ_BIT(Number,PIN1));
+	MCAL_DIO_Write_Pin(PORT_B,PIN2,READ_BIT(Number,PIN2));
+	MCAL_DIO_Write_Pin(PORT_B,PIN4,READ_BIT(Number,PIN3));
+	
 }
 
+void HAL_Seven_Segment_Clear(EN_7Seg_Com_t Com){
+	switch (Com)
+	{
+		case ALL_COM:
+			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
+			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
+			break;
+		
+		case COM3:
+			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
+			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
+			break;
+		
+		case COM4:
+			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
+			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
+			break;
+		
+		case COM2:
+			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
+			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
+			break;
+		
+		case COM1:
+			MCAL_DIO_Write_Pin(PORT_B,PIN5,High);
+			MCAL_DIO_Write_Pin(PORT_B,PIN6,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN2,High);
+			MCAL_DIO_Write_Pin(PORT_A,PIN3,High);
+			break;
+		
+		default:
+			break;
+	}
+}
+/*
 void HAL_Seven_Segment_Write(u8_t Number){
 	
 
@@ -128,3 +185,4 @@ void HAL_Seven_Segment_Write(u8_t Number){
 	break;
 	}
 }
+*/
