@@ -26,7 +26,8 @@ App/Toggle_LED_Count_LCD_Using_EXTI/toggle_led_count_on_lcd_using_exti.d \
  e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\lib\std_types.h \
  e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\mcal\global_int\global_interrupt.h \
  e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\lib\bit_math.h \
- e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\lib\std_types.h
+ e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\lib\std_types.h \
+ ../App/Toggle_LED_Count_LCD_Using_EXTI/../../MCAL/Global_INT/global_interrupt_private.h
 
 ../App/Toggle_LED_Count_LCD_Using_EXTI/toggle_led_count_on_lcd_using_exti.h:
 
@@ -79,3 +80,5 @@ e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\mcal\global_int\global_inter
 e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\lib\bit_math.h:
 
 e:\workspace\atmelstudio\nti\drivers\ atmega32\ nti\lib\std_types.h:
+
+../App/Toggle_LED_Count_LCD_Using_EXTI/../../MCAL/Global_INT/global_interrupt_private.h:

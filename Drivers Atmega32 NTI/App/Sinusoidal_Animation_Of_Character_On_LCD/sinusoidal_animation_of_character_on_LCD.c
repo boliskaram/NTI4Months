@@ -27,7 +27,7 @@ void Sinusoidal_Animation_Update(){
 			count = 0 ;
 		}
 		HAL_LCD_goto(i,count);
-		HAL_LCD_Write_char('B');
+		HAL_LCD_Write_char('E');
 		_delay_ms(300);
 		HAL_LCD_clear_screen();
 		_delay_ms(300);
@@ -38,7 +38,7 @@ void Sinusoidal_Animation_Update(){
 			count = 0 ;
 		}
 		HAL_LCD_goto(i,count);
-		HAL_LCD_Write_char('B');
+		HAL_LCD_Write_char('E');
 		_delay_ms(300);
 		HAL_LCD_clear_screen();
 		_delay_ms(300);
