@@ -1,3 +1,3 @@
 # NTI4Months
 
-# Atmerga32 Drivers 
+# Atmega32 Drivers 
