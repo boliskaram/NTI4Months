@@ -1,0 +1,2 @@
+../STM32F103C8_Drivers/RCC_Driver/rcc.c:13:6:MCAL_RCC_SysType_Init	4	static
+../STM32F103C8_Drivers/RCC_Driver/rcc.c:52:6:MCAL_RCC_Enable_Clock	16	static

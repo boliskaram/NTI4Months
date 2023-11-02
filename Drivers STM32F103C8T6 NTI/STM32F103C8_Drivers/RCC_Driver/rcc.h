@@ -1,0 +1,132 @@
+/*
+ * rcc.h
+ *
+ *  Created on: Nov 1, 2023
+ *      Author: Bolis
+ */
+
+#ifndef RCC_DRIVER_RCC_H_
+#define RCC_DRIVER_RCC_H_
+
+#include "stdlib.h"
+#include "inttypes.h"
+
+#define AHBENR_BUS 0
+#define APB2ENR_BUS 2
+#define	APB1ENR_BUS 1
+
+#define RCC_HSI_CLK 			0
+#define RCC_HSE_CRYSTAL_CLK 	1
+#define RCC_HSE_RC_CLK 			2
+#define RCC_PLL_CRYSTAL_CLK 	3
+#define RCC_PLL_RC_CLK 			4
+
+typedef enum EN_Peripheral_t{
+	AFIO_EN_CLK = 0 	,
+	IOPA_EN_CLK = 2 	,
+	IOPB_EN_CLK			,
+	IOPC_EN_CLK			,
+	IOPD_EN_CLK			,
+	IOPE_EN_CLK			,
+	IOPF_EN_CLK			,
+	IOPG_EN_CLK			,
+	ADC1_EN_CLK			,
+	ADC2_EN_CLK			,
+	TIM1_EN_CLK			,
+	SPI1_EN_CLK			,
+	TIM8_EN_CLK			,
+	USART1_EN_CLK		,
+	ADC3_EN_CLK			,
+	TIM9_EN_CLK	= 19	,
+	TIM10_EN_CLK		,
+	TIM11_EN_CLK		,
+
+	DMA1_EN_CLK	 = 0 	,
+	DMA2_EN_CLK			,
+	SRAM_EN_CLK			,
+	FLITF_EN_CLK = 4	,
+	CRC_EN_CLK	 = 6	,
+	FSMC_EN_CLK	 = 8	,
+	SDIO_EN_CLK	 = 10	,
+
+	TIM2_EN_CLK	 = 0 	,
+	TIM3_EN_CLK			,
+	TIM4_EN_CLK			,
+	TIM5_EN_CLK			,
+	TIM6_EN_CLK			,
+	TIM7_EN_CLK			,
+	TIM12_EN_CLK		,
+	TIM13_EN_CLK		,
+	TIM14_EN_CLK		,
+	WWDG_EN_CLK	 = 11 	,
+	SPI2_EN_CLK	 = 14 	,
+	SPI3_EN_CLK	 		,
+	USART2_EN_CLK = 17 	,
+	USART3_EN_CLK	 	,
+	UART4_EN_CLK	 	,
+	UART5_EN_CLK	 	,
+	I2C1_EN_CLK	 		,
+	I2C2_EN_CLK	 		,
+	USB_EN_CLK	 		,
+	CAN_EN_CLK	 =25	,
+	BKP_EN_CLK	 =27	,
+	PWR_EN_CLK	 		,
+	DAC_EN_CLK			,
+}EN_Peripheral_t;
+
+#define AFIO_BUS 	APB2ENR_BUS
+#define	IOPA_BUS 	APB2ENR_BUS
+#define IOPB_BUS	APB2ENR_BUS
+#define IOPC_BUS	APB2ENR_BUS
+#define IOPD_BUS	APB2ENR_BUS
+#define IOPE_BUS	APB2ENR_BUS
+#define IOPF_BUS	APB2ENR_BUS
+#define IOPG_BUS	APB2ENR_BUS
+#define ADC1_BUS	APB2ENR_BUS
+#define	ADC2_BUS 	APB2ENR_BUS
+#define TIM1_BUS	APB2ENR_BUS
+#define SPI1_BUS	APB2ENR_BUS
+#define TIM8_BUS	APB2ENR_BUS
+#define USART1_BUS 	APB2ENR_BUS
+#define ADC3_BUS	APB2ENR_BUS
+#define TIM9_BUS	APB2ENR_BUS
+#define TIM10_BUS 	APB2ENR_BUS
+#define TIM11_BUS 	APB2ENR_BUS
+
+#define DMA1_BUS	AHBENR_BUS
+#define	DMA2_BUS	AHBENR_BUS
+#define	SRAM_BUS	AHBENR_BUS
+#define	FLITF_BUS 	AHBENR_BUS
+#define	CRC_BUS	 	AHBENR_BUS
+#define	FSMC_BUS	AHBENR_BUS
+#define	SDIO_BUS 	AHBENR_BUS
+
+#define TIM2_BUS	 	APB1ENR_BUS
+#define	TIM3_BUS		APB1ENR_BUS
+#define	TIM4_BUS		APB1ENR_BUS
+#define	TIM5_BUS		APB1ENR_BUS
+#define TIM6_BUS		APB1ENR_BUS
+#define TIM7_BUS		APB1ENR_BUS
+#define TIM12_BUS		APB1ENR_BUS
+#define TIM13_BUS		APB1ENR_BUS
+#define TIM14_BUS		APB1ENR_BUS
+#define WWDG_BUS 		APB1ENR_BUS
+#define	SPI2_BUS	 	APB1ENR_BUS
+#define	SPI3_BUS	 	APB1ENR_BUS
+#define	USART2_BUS		APB1ENR_BUS
+#define	USART3_BUS		APB1ENR_BUS
+#define	UART4_BUS		APB1ENR_BUS
+#define	UART5_BUS		APB1ENR_BUS
+#define	I2C1_BUS	 	APB1ENR_BUS
+#define	I2C2_BUS	 	APB1ENR_BUS
+#define	USB_BUS		 	APB1ENR_BUS
+#define	CAN_BUS		 	APB1ENR_BUS
+#define	BKP_BUS		 	APB1ENR_BUS
+#define	PWR_BUS		 	APB1ENR_BUS
+#define	DAC_BUS			APB1ENR_BUS
+
+void MCAL_RCC_SysType_Init(void);
+void MCAL_RCC_Enable_Clock(EN_Peripheral_t Peripheral,uint8_t Bus);
+
+
+#endif /* RCC_DRIVER_RCC_H_ */
